@@ -26,7 +26,7 @@ btn.addEventListener("click", function () {
       let medium = data.formats[1].url;
       let low = data.formats[0].url;
       vidname.innerHTML = `<h1>${data.title}</h1>`;
-      displayarea.innerHTML = `<div><a href="${hd}">HD Quality</a></div><div><a href="${medium}">Medium Quality</a></div><div><a href="${low}">Low Quality</a></div>`;
+      displayarea.innerHTML = `<div><a href="${hd}?dl=1" download="hd">HD Quality</a></div><div><a href="${medium}?dl=1" download>Medium Quality</a></div><div><a href="${low}" download>Low Quality</a></div>`;
       thumbarea.innerHTML = `<img src="${data.thumbnail[1].url}"/>`;
     })
     .catch((err) => console.error(err));
